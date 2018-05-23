@@ -6,21 +6,28 @@ License:        GPLv3+
 URL:            https://www.gnome.org/~ole/%{name}
 Source:         %{url}/%{name}-%{version}.tar.xz
 
-BuildRequires:  gtk3-devel
+#BuildRequires:  gtk3-devel
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:  pango
-BuildRequires:  libchamplain-devel
-BuildRequires:  libxml2-devel
+#BuildRequires:  libchamplain-devel
+BuildRequires:  pkgconfig(champlain-0.12)
+#BuildRequires:  libxml2-devel
+BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  intltool
 BuildRequires:  itstool
-BuildRequires:  libappstream-glib
+BuildRequires:  libappstream-glib8
 BuildRequires:  desktop-file-utils
-BuildRequires:  geocode-glib-devel
-BuildRequires:  gstreamer-devel
-BuildRequires:  gstreamer1-plugins-bad-free-devel
-BuildRequires:  gstreamer1-plugins-base-devel
+#BuildRequires:  geocode-glib-devel
+BuildRequires:  pkgconfig(geocode-glib-1.0)
+#BuildRequires:  gstreamer-devel
+BuildRequires:  pkgconfig(gstreamer-1.0)
+#BuildRequires:  gstreamer1-plugins-bad-free-devel
+BuildRequires:  pkgconfig(gstreamer-plugins-bad-1.0)
+#BuildRequires:  gstreamer1-plugins-base-devel
+BuildRequires:  pkgconfig(gstreamer-plugins-base-1.0)
 Requires:       gstreamer1 >= 1.8.3
 Requires:       gstreamer1-plugins-ugly-free >= 1.8.3
-Requires:       geocode-glib >= 3.20.1
+Requires:       geocode-glib
 
 %description
 GNOME Internet Radio Locator for GNOME 3 is a Free Software program
