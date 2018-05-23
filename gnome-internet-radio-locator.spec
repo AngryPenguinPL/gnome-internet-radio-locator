@@ -15,7 +15,8 @@ BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  intltool
 BuildRequires:  itstool
-BuildRequires:  libappstream-glib
+#BuildRequires:  libappstream-glib
+BuildRequires:	pkgconfig(appstream-glib)
 BuildRequires:  desktop-file-utils
 #BuildRequires:  geocode-glib-devel
 BuildRequires:  pkgconfig(geocode-glib-1.0)
